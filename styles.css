@@ -1,0 +1,166 @@
+:root {
+    font-size: 62.5%;
+    --primaryFont: Fira Sans Condensed,Helvetica Neue,Helvetica,Arial,sans-serif;
+    --secondaryFont: Merriweather, sans-serif; 
+}
+
+
+
+body {
+    font-size: 1.6rem;
+    border: 0.2rem solid green;
+    padding: 10px 20px;
+    position: relative;
+    
+}
+
+.this {
+    border: 6px pink solid;
+    position: relative;
+
+    height: 300px;
+
+}
+
+.items-container {
+    border: 2px red solid;
+    max-width: 30ch;
+    overflow: hidden;
+
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.move-container {
+    border: 3px blue solid;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: blueviolet;
+
+}
+
+@media (min-width: 800px) {
+    .move-container {
+        margin-bottom: 2em;
+        margin-left: 2em;
+        background-color: yellow;
+    }
+}
+
+.items-container h1 {
+    font-size: 2.0rem;
+}
+
+
+.items-container button {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    font-size: 2rem;
+
+    padding-left: 1.8em;
+    padding-right: 1.8em;
+
+    border: none;
+    background-color: lightblue;
+}
+
+
+
+
+.menu-button {
+    display: flex;
+    flex-direction: column;
+    border: 4px orange solid;
+
+
+    height: 100px;
+    width: 100px;
+
+    margin-top: 100px;
+    margin-left: 55%;
+
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.top-button {
+    height: 4px;
+    
+    width: 50px;
+    background-color: black;
+
+    margin-bottom: 5px;
+
+}
+
+.middle-button {
+    height: 4px;
+    
+    width: 50px;
+    background-color: green;
+
+    margin-bottom: 5px;
+
+}
+
+.bottom-button {
+    height: 4px;
+    
+    width: 50px;
+    background-color: red;
+
+    margin-bottom: 5px;
+
+}
+
+
+@media (max-width: 884px) {
+
+
+    .top-button {
+        margin-bottom: -4px;
+        animation: 1s topAnimation forwards;
+        background-color: black;
+    }
+
+    .bottom-button {
+        margin-top: -9px;
+        animation: 1s bottomAnimation forwards;
+        background-color: black;
+    }
+
+    .middle-button {
+        visibility: hidden;
+    }
+
+
+
+
+
+
+ 
+}
+
+   @keyframes topAnimation {
+        0% {
+            transform: rotate(0); 
+        }
+
+        100% {
+            transform: rotate(-45deg);
+        }
+    }
+
+    @keyframes bottomAnimation {
+        0% {
+            transform: rotate(0); 
+        }
+
+        100% {
+            transform: rotate(45deg);
+        }
+    }
